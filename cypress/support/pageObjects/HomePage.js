@@ -3,7 +3,7 @@ class HomePage
 
 getEditBox()
 {
-    return cy.get('input[name="name"]:nth-child(2)')
+    return cy.get('input[name="name"]').first()
 }
 
 getTwoWayDataBinding()

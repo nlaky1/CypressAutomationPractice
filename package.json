@@ -1,20 +1,20 @@
 {
-  "name": "automation",
-  "version": "1.0.0",
-  "description": "",
+  "name": "cypress-automation-practice",
+  "version": "2.0.0",
+  "description": "Enterprise-grade Cypress automation framework with POM and CI/CD",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules\\.bin\\cypress run",
-    "headTest": "npm run test -- --headed",
-    "chromeTest": "npm run test -- --browser chrome",
-    "recordDashBoardTest": "npm run test -- --record --key fa423514-5a84-42a7-b6a0-b5e7191bba12 --reporter mochawesome",
-    "GreenKartTest": "npm run test -- --spec \"cypress/integration/GreenKart/*\""
+    "test": "cypress run",
+    "test:headed": "cypress run --headed",
+    "test:chrome": "cypress run --browser chrome",
+    "test:greenkart": "cypress run --spec \"cypress/e2e/GreenKart/**/*\"",
+    "clean": "rm -rf cypress/reports",
+    "format": "prettier --write \"cypress/**/*.js\""
   },
-  "author": "Nikhil",
+  "author": "Nikhil Laky",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^3.8.3",
-    "mocha": "^5.2.0",
-    "mochawesome": "^4.0.1"
+    "cypress": "^13.11.0",
+    "prettier": "^3.2.5"
   }
 }
